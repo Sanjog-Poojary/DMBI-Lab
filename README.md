@@ -54,5 +54,18 @@ python CA3/src/matrix_factorization.py
 ### Run Individual Lab Experiments
 Each experiment script can be executed from its respective directory, e.g.:
 ```bash
+# Exp 2 Preprocessing
 cd Exp2_Data_Preprocessing && python preprocessing.py
+
+# Exp 6 K-Means Clustering (Python)
+cd Exp6_KMeans_Clustering && python kmeans_clustering.py
+
+# Exp 7 K-Means RapidMiner Comparison (Python)
+cd Exp7_KMeans_RapidMiner && python kmeans_rapidminer_comparison.py
+
+# Exp 8 Apriori Association Rule Mining (Python)
+cd Exp8_Apriori_Association && python apriori_association.py
+
+# Exp 9 FP-Growth Association Rule Mining (Python)
+cd Exp9_FP_Growth_RapidMiner && python fpgrowth_association.py
 ```

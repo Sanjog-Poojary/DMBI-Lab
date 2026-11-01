@@ -1,3 +1,4 @@
-Dataset: JioHotstar Preprocessed Dataset (33,171 rows x 24 columns).
-Place the CSV in this folder as JioHotstar_Preprocessed_Dataset.csv.
-The CSV is not included in this package.
+Dataset: JioHotstar Preprocessed Dataset (33,171 rows x 23 columns).
+CSV file: JioHotstar_Preprocessed_Dataset.csv (Included in this folder).
+Target features used for K-Means: episode_duration_min, pacing_score, hook_strength, visual_intensity, avg_watch_percentage, pause_count, rewind_count, skip_intro, cognitive_load, night_watch_safe.
+Run script: python kmeans_clustering.py

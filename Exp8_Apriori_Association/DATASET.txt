@@ -1,3 +1,4 @@
-Dataset: JioHotstar Preprocessed Dataset (33,171 rows x 24 columns).
-Place the CSV in this folder as JioHotstar_Preprocessed_Dataset.csv.
-The CSV is not included in this package.
+Dataset: JioHotstar Preprocessed Dataset (33,171 rows x 23 columns).
+CSV file: JioHotstar_Preprocessed_Dataset.csv (Included in this folder).
+Transaction CSV: JioHotstar_Association_Transactions.csv (7 binary behaviour items).
+Run script: python apriori_association.py
