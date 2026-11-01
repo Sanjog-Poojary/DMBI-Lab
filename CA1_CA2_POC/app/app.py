@@ -14,10 +14,11 @@ import pandas as pd
 import streamlit as st
 
 # ── Path setup ────────────────────────────────────────────────────────────────
-_APP_DIR  = os.path.dirname(os.path.abspath(__file__))
-_REPO     = os.path.abspath(os.path.join(_APP_DIR, "..", ".."))
+_APP_DIR = os.path.dirname(os.path.abspath(__file__))
+_REPO    = os.path.abspath(os.path.join(_APP_DIR, "..", ".."))
 for _p in (os.path.join(_REPO, "CA1_CA2_POC", "src"),
-           os.path.join(_REPO, "CA3", "src")):
+           os.path.join(_REPO, "CA3", "src"),
+           _APP_DIR):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 
@@ -89,12 +90,14 @@ if page == "Overview":
     show_banner()
 
     fact_df, _ = get_schema(cleaned_df)
+    mean_watch = df_filtered["watch_duration_min"].mean()
+    mean_watch_str = f"{mean_watch:.1f}" if not np.isnan(mean_watch) else "0.0"
     kpi_row([
-        ("Raw rows",          f"{len(raw_df):,}"),
-        ("After de-dup",      f"{len(cleaned_df):,}"),
-        ("Fact rows",         f"{len(fact_df):,}"),
+        ("Raw rows",            f"{len(raw_df):,}"),
+        ("After de-dup",        f"{len(cleaned_df):,}"),
+        ("Fact rows",           f"{len(fact_df):,}"),
         ("Total monthly spend", f"${df_filtered['monthly_spend'].sum():,.0f}"),
-        ("Mean watch (min)",  f"{df_filtered['watch_duration_min'].mean():.1f}"),
+        ("Mean watch (min)",    mean_watch_str),
     ])
 
     st.subheader("Cleaning summary")
@@ -128,27 +131,32 @@ elif page == "Warehouse & OLAP":
         col.write(f"**{name}** ({len(ddf)} rows)")
         col.dataframe(ddf, use_container_width=True)
 
-    rollup, premium_genre, dice = get_olap(df_filtered)
+    rollup, premium_genre, _ = get_olap(cleaned_df)
+    _, _, dice = get_olap(df_filtered)
 
     st.subheader("Roll-up: avg watch minutes by Tier × Genre")
     st.caption("OLAP operation: Roll-Up — aggregates streaming minutes across genre and tier dimensions.")
-    fig, ax = plt.subplots(figsize=(9, 3))
-    im = ax.imshow(rollup.fillna(0), cmap="YlOrRd", aspect="auto")
-    ax.set_xticks(range(len(rollup.columns))); ax.set_xticklabels(rollup.columns, rotation=45, ha="right")
-    ax.set_yticks(range(len(rollup.index)));   ax.set_yticklabels(rollup.index)
-    for i in range(len(rollup.index)):
-        for j in range(len(rollup.columns)):
-            v = rollup.iloc[i, j]
-            ax.text(j, i, f"{v:.0f}" if not np.isnan(v) else "", ha="center", va="center", fontsize=8)
-    fig.colorbar(im, ax=ax, label="Avg watch min"); fig.tight_layout()
-    st.pyplot(fig); plt.close(fig)
+    if not rollup.empty:
+        fig, ax = plt.subplots(figsize=(9, 3))
+        im = ax.imshow(rollup.fillna(0), cmap="YlOrRd", aspect="auto")
+        ax.set_xticks(range(len(rollup.columns))); ax.set_xticklabels(rollup.columns, rotation=45, ha="right")
+        ax.set_yticks(range(len(rollup.index)));   ax.set_yticklabels(rollup.index)
+        for i in range(len(rollup.index)):
+            for j in range(len(rollup.columns)):
+                v = rollup.iloc[i, j]
+                ax.text(j, i, f"{v:.0f}" if not np.isnan(v) else "", ha="center", va="center", fontsize=8)
+        fig.colorbar(im, ax=ax, label="Avg watch min"); fig.tight_layout()
+        st.pyplot(fig); plt.close(fig)
 
     st.subheader("Slice: mean monthly spend by Genre (Premium subscribers only)")
     st.caption("OLAP operation: Slice — fixes subscription_tier = 'Premium', views spend across genres.")
-    fig2, ax2 = plt.subplots(figsize=(8, 3))
-    premium_genre.plot(kind="bar", ax=ax2, color="#4C72B0", edgecolor="white")
-    ax2.set_xlabel("Genre"); ax2.set_ylabel("Mean monthly spend ($)"); ax2.set_xticklabels(premium_genre.index, rotation=45, ha="right")
-    fig2.tight_layout(); st.pyplot(fig2); plt.close(fig2)
+    if len(premium_genre) > 0:
+        fig2, ax2 = plt.subplots(figsize=(8, 3))
+        premium_genre.plot(kind="bar", ax=ax2, color="#4C72B0", edgecolor="white")
+        ax2.set_xlabel("Genre"); ax2.set_ylabel("Mean monthly spend ($)"); ax2.set_xticklabels(premium_genre.index, rotation=45, ha="right")
+        fig2.tight_layout(); st.pyplot(fig2); plt.close(fig2)
+    else:
+        st.info("No Premium subscribers present.")
 
     st.subheader("Dice: total monthly spend by Tier × Country (filtered selection)")
     st.caption("OLAP operation: Dice — filters both tier and country dimensions simultaneously.")
@@ -221,6 +229,7 @@ elif page == "Segments":
 
     st.subheader("Cluster profile (mean feature values)")
     profile_df = pd.DataFrame(seg["cluster_profile"])
+    profile_df.index.name = "Cluster"
     st.dataframe(profile_df, use_container_width=True)
 
 
@@ -244,12 +253,12 @@ elif page == "Churn model":
     table_rows = []
     for model_name, r in results.items():
         table_rows.append({
-            "Model":         model_name,
-            "Holdout acc.":  r["accuracy"],
-            "Churn prec.":   r["precision"],
-            "Churn recall":  r["recall"],
-            "Churn F1":      r["f1"],
-            "CV acc. (5-fold)": r["cv_accuracy"],
+            "Model":            model_name,
+            "Holdout acc.":     f"{r['accuracy']:.3f}",
+            "Churn prec.":      f"{r['precision']:.3f}",
+            "Churn recall":     f"{r['recall']:.3f}",
+            "Churn F1":         f"{r['f1']:.3f}",
+            "CV acc. (5-fold)": f"{r['cv_accuracy']:.3f}",
         })
     st.subheader("Model comparison")
     st.dataframe(pd.DataFrame(table_rows).set_index("Model"), use_container_width=True)
@@ -277,10 +286,11 @@ elif page == "Recommendations":
     )
 
     if not os.path.exists(_CSV_CA3):
-        st.warning("viewing_sessions.csv not found. Running generator...")
-        import subprocess
-        subprocess.run([sys.executable,
-                        os.path.join(_REPO, "CA3", "src", "generate_viewing_sessions.py")])
+        with st.spinner("Generating viewing sessions dataset..."):
+            from generate_viewing_sessions import generate
+            df_gen = generate()
+            os.makedirs(os.path.dirname(_CSV_CA3), exist_ok=True)
+            df_gen.to_csv(_CSV_CA3, index=False)
 
     c1, c2, c3 = st.columns(3)
     min_sup  = c1.slider("Min support",    0.01, 0.20, 0.05, 0.01)
@@ -310,4 +320,3 @@ elif page == "Recommendations":
         st.success(f"**Recommended genres:** {', '.join(recs)}")
     else:
         st.info("No recommendations (user has already watched all rule consequents, or no matching rules).")
-

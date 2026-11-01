@@ -18,6 +18,12 @@ def show_banner():
     st.info(BANNER)
 
 
+def repo_root():
+    return os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "..", "..")
+    )
+
+
 def add_src_to_path():
     """Add CA1_CA2_POC/src and CA3/src to sys.path so imports work."""
     r_root = repo_root()
@@ -26,12 +32,6 @@ def add_src_to_path():
         if p not in sys.path:
             sys.path.insert(0, p)
     return r_root
-
-
-def repo_root():
-    return os.path.abspath(
-        os.path.join(os.path.dirname(__file__), "..", "..")
-    )
 
 
 def fmt_number(v, decimals=2):
@@ -55,10 +55,11 @@ def make_confusion_heatmap(cm, labels):
     ax.set_xticks(range(len(labels))); ax.set_xticklabels(labels)
     ax.set_yticks(range(len(labels))); ax.set_yticklabels(labels)
     ax.set_xlabel("Predicted"); ax.set_ylabel("Actual")
+    max_val = np.max(cm) if np.max(cm) > 0 else 1
     for i in range(len(labels)):
         for j in range(len(labels)):
             ax.text(j, i, str(cm[i][j]), ha="center", va="center",
-                    color="white" if cm[i][j] > cm[0][0] / 1.5 else "black",
+                    color="white" if cm[i][j] > max_val / 2 else "black",
                     fontsize=12, fontweight="bold")
     fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
     fig.tight_layout()
@@ -79,4 +80,3 @@ def apply_sidebar_filters(df: pd.DataFrame):
 
     mask = df["subscription_tier"].isin(sel_tiers) & df["country"].isin(sel_countries)
     return df[mask].copy()
-
