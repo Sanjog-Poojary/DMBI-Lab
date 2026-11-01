@@ -50,7 +50,8 @@ CA3/
 │   ├── association_rules.csv            # Mined association rules
 │   └── cf_results.json                  # Hit Rate @ 3 benchmark evaluation results
 ├── presentation/
-│   └── CA3_Matrix_Factorization.pptx    # 16:9 presentation slide deck (8-10 slides)
+│   ├── Matrix-Factorization-for-Content-Recommendation.pptx # 16:9 presentation slide deck (9 slides)
+│   └── CA3_Matrix_Factorization.pptx    # Standard coursework deck alias
 └── references/
     └── reference_paper.txt              # Koren et al. (2009) IEEE Computer citation
 ```

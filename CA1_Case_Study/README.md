@@ -67,7 +67,8 @@ CA1_Case_Study/
 ├── data/
 │   └── streaming_platform_dataset.csv  # 515 subscriber dataset copy
 ├── presentation/
-│   └── CA1_Case_Study.pptx             # 16:9 presentation slide deck (8-10 slides)
+│   ├── Diagnosing-Subscriber-Churn.pptx # 16:9 presentation slide deck (8 slides)
+│   └── CA1_Case_Study.pptx             # Standard coursework deck alias
 └── references/
     └── reference_paper.txt             # Academic literature citation & verification notes
 ```
