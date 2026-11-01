@@ -29,7 +29,15 @@ Writes `CA1_CA2_POC/outputs/poc_results.json`.
 
 ## Run the app
 
-**From the repository root:**
+**Option 1 — Windows Batch File (Easiest):**
+
+Double-click `run_app.bat` in the repository root, or run:
+
+```cmd
+run_app.bat
+```
+
+**Option 2 — CLI command from repository root:**
 
 ```bash
 streamlit run CA1_CA2_POC/app/app.py
