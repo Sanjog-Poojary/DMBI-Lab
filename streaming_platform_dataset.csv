@@ -1,0 +1,516 @@
+user_id,age,subscription_tier,device_type,watch_duration_min,completion_pct,genre,country,monthly_spend
+1329,58.0,Basic,Laptop,80.0,59.3,Action,Japan,199
+1354,46.0,Free,Laptop,148.0,57.6,Horror,UK,0
+1351,56.0,Premium,Tablet,177.0,48.5,Drama,USA,549
+1151,19.0,Premium,Tablet,109.0,70.1,Documentary,USA,499
+1279,16.0,Premium,Mobile,138.0,61.2,Drama,India,499
+1072,40.0,Premium,Mobile,144.0,86.7,Comedy,Germany,499
+1135,63.0,Basic,Smart TV,114.0,43.1,Thriller,Canada,199
+1371,15.0,Basic,Laptop,41.0,68.7,Action,Canada,199
+1249,59.0,Free,Laptop,74.0,88.8,Action,Germany,0
+1091,,Basic,Smart TV,,,Comedy,,199
+1051,30.0,Basic,Tablet,69.0,92.7,Thriller,USA,249
+1223,44.0,Basic,Mobile,28.0,76.9,Documentary,Australia,199
+1335,36.0,Premium,Laptop,46.0,74.1,Documentary,UK,549
+1099,57.0,Premium,Laptop,103.0,74.7,Romance,USA,499
+1446,37.0,Free,Smart TV,47.0,46.7,Comedy,India,0
+1076,22.0,Premium,Laptop,148.0,76.3,Comedy,UK,549
+1245,60.0,Basic,Mobile,6.0,57.0,Action,Canada,199
+1366,58.0,Premium,Tablet,119.0,1.9,Documentary,USA,499
+1422,19.0,Free,Smart TV,50.0,41.6,Sci-Fi,India,0
+1198,29.0,Free,Mobile,29.0,86.4,Horror,India,0
+1356,65.0,Free,Smart TV,9.0,65.3,Drama,USA,0
+1454,28.0,Premium,Mobile,89.0,83.3,Comedy,Canada,499
+1320,43.0,Free,Tablet,92.0,58.4,Romance,UK,0
+1425,25.0,Basic,Tablet,37.0,25.8,Romance,Canada,199
+1262,23.0,premium,Laptop,117.0,51.6,Action,USA,499
+1458,28.0,Free,Tablet,15.0,75.8,Sci-Fi,Brazil,0
+1323,,Free,Tablet,,,Comedy,,50
+1142,46.0,Free,Mobile,29.0,49.3,Thriller,India,0
+1477,15.0,Premium,Laptop,123.0,55.8,Horror,Australia,549
+1413,45.0,Free,Mobile,5.0,68.0,Drama,Australia,0
+1281,61.0,Free,Laptop,1.0,55.0,Thriller,UK,0
+1344,44.0,Premium,Smart TV,69.0,53.0,Thriller,Germany,499
+1128,22.0,Basic,Tablet,78.0,34.0,Documentary,Australia,249
+1041,58.0,Premium,Laptop,188.0,11.5,Romance,Japan,499
+1359,51.0,Free,Smart TV,1.0,23.4,Drama,Australia,50
+1124,58.0,Basic,Mobile,61.0,69.7,Horror,Germany,199
+1404,29.0,Basic,Tablet,153.0,78.1,Thriller,Japan,249
+1108,49.0,Free,Tablet,82.0,60.5,Documentary,Australia,0
+1132,60.0,Basic,Smart TV,127.0,16.7,Sci-Fi,Germany,199
+1420,50.0,Basic,Smart TV,132.0,39.3,Drama,Japan,199
+1158,60.0,Basic,Tablet,-5.0,2.9,Documentary,India,199
+1273,32.0,Basic,Mobile,114.0,0.0,Action,India,199
+1395,27.0,Basic,Mobile,48.0,94.4,Documentary,Brazil,199
+1314,44.0,Basic,Laptop,58.0,51.8,Action,USA,199
+1225,44.0,Basic,Mobile,72.0,89.2,Drama,Japan,199
+1318,31.0,Free,Laptop,1.0,84.1,Action,UK,0
+1441,35.0,Basic,Tablet,50.0,50.1,Sci-Fi,Germany,249
+1263,57.0,Premium,Tablet,72.0,100.0,Horror,Canada,499
+1471,64.0,Free,Mobile,1.0,72.8,Action,India,0
+1222,36.0,Free,Smart TV,132.0,61.5,Romance,Germany,0
+1238,21.0,Free,Mobile,84.0,79.2,Romance,Germany,0
+1468,36.0,Premium,Laptop,100.0,33.8,Thriller,Australia,499
+1192,56.0,Basic,Smart TV,108.0,49.8,Comedy,India,199
+1156,65.0,Basic,Laptop,27.0,46.0,Documentary,Germany,199
+1403,42.0,Premium,Tablet,54.0,18.9,Drama,Australia,499
+1057,39.0,Free,Smart TV,36.0,29.6,Drama,Canada,0
+1243,48.0,Basic,Laptop,45.0,71.8,Romance,Brazil,199
+1429,60.0,Free,Tablet,62.0,27.3,Thriller,USA,50
+1293,63.0,Basic,Tablet,45.0,30.7,Comedy,Japan,199
+1411,27.0,Basic,Mobile,20.0,54.4,Drama,Japan,199
+1369,16.0,Basic,Mobile,70.0,42.2,Action,Australia,199
+1306,,Basic,Mobile,,,Drama,,199
+1310,45.0,Free,Laptop,1.0,81.6,Horror,Japan,0
+1133,16.0,Basic,Tablet,10.0,64.7,Sci-Fi,India,249
+1315,42.0,Basic,Tablet,84.0,64.7,Comedy,Brazil,199
+1035,,Premium,Laptop,,39.9,Sci-Fi,India,499
+1337,35.0,Premium,Laptop,103.0,42.8,Horror,India,499
+1405,37.0,Premium,Tablet,133.0,81.3,Horror,India,499
+1408,18.0,Free,Mobile,1.0,35.4,Action,Japan,0
+1347,23.0,Basic,Laptop,132.0,68.9,Thriller,Japan,249
+1029,21.0,Premium,Tablet,77.0,47.5,Horror,India,499
+1044,36.0,Premium,Smart TV,74.0,61.9,Action,India,499
+1294,,Basic,Laptop,,,Horror,Japan,249
+1296,39.0,Free,Mobile,91.0,100.0,Romance,USA,0
+1481,19.0,Basic,Laptop,-5.0,100.0,Horror,USA,199
+1112,61.0,Premium,Laptop,154.0,100.0,Action,Germany,499
+1050,45.0,Premium,Tablet,95.0,73.9,Documentary,Canada,549
+1141,27.0,Basic,Mobile,73.0,53.6,Thriller,Japan,249
+1418,56.0,Premium,Tablet,98.0,78.8,Comedy,Japan,499
+1185,27.0,Premium,Smart TV,86.0,66.5,Horror,USA,499
+1384,34.0,Premium,Laptop,80.0,72.6,Comedy,India,499
+1220,36.0,Free,Tablet,3.0,43.6,Sci-Fi,Japan,0
+1322,18.0,Free,Tablet,1.0,5.0,Thriller,Canada,0
+1467,41.0,Basic,Laptop,108.0,52.1,Comedy,Canada,199
+1054,55.0,Free,Tablet,81.0,38.3,Drama,Brazil,0
+1157,20.0,Free,Laptop,25.0,34.1,Sci-Fi,Germany,0
+1171,61.0,Premium,Tablet,126.0,100.0,Horror,Brazil,549
+1424,51.0,Premium,Mobile,158.0,100.0,Comedy,Brazil,549
+1340,25.0,Basic,Mobile,21.0,58.8,Comedy,Canada,199
+1242,19.0,Premium,Smart TV,157.0,43.2,Comedy,Australia,499
+1067,,Free,Smart TV,,,Thriller,,0
+1430,17.0,PREMIUM,Smart TV,42.0,28.7,Horror,UK,499
+1117,43.0,Free,Tablet,1.0,24.8,Action,UK,50
+1132,60.0,Basic,Smart TV,127.0,16.7,Sci-Fi,Germany,199
+1449,49.0,Free,Tablet,44.0,100.0,Sci-Fi,Australia,0
+1482,22.0,Premium,Tablet,95.0,64.6,Romance,Japan,549
+1493,,Free,Smart TV,,,Thriller,UK,50
+1022,37.0,Premium,Laptop,158.0,90.8,Action,Australia,549
+1492,45.0,Basic,Laptop,154.0,70.5,Horror,India,199
+1177,20.0,Basic,Tablet,59.0,71.3,Documentary,UK,199
+1301,62.0,Premium,Smart TV,89.0,65.6,Drama,Australia,499
+1100,54.0,Basic,Smart TV,40.0,65.2,Horror,India,249
+1053,19.0,Free,Smart TV,40.0,79.5,Action,Australia,0
+1140,28.0,Basic,Tablet,33.0,40.5,Horror,USA,199
+1360,38.0,Free,Tablet,68.0,100.0,Documentary,Germany,0
+1379,64.0,Free,Mobile,1.0,75.7,Action,Canada,0
+1164,65.0,Basic,Mobile,83.0,67.8,Comedy,Brazil,199
+1402,,Premium,Laptop,112.0,88.2,Horror,Australia,499
+1190,,Free,Smart TV,,,Horror,,0
+1034,27.0,Free,Laptop,1.0,68.6,Drama,India,0
+1130,41.0,Basic,Mobile,73.0,100.0,Romance,Australia,199
+1313,,Basic,Tablet,,,Sci-Fi,Australia,199
+1235,49.0,Basic,Mobile,92.0,36.5,Horror,Japan,249
+1319,32.0,Basic,Laptop,74.0,46.9,Documentary,USA,199
+1480,,Premium,Tablet,,,Documentary,,499
+1150,56.0,Premium,Mobile,41.0,58.6,Thriller,Japan,549
+1385,15.0,Basic,Tablet,31.0,72.1,Thriller,Canada,199
+1307,,Premium,Tablet,122.0,44.3,Comedy,UK,549
+1154,18.0,Premium,Tablet,139.0,52.7,Drama,Canada,499
+1239,33.0,Basic,Smart TV,114.0,84.0,Action,Australia,199
+1406,57.0,Free,Tablet,19.0,69.8,Documentary,UK,0
+1281,61.0,Free,Laptop,1.0,55.0,Thriller,UK,0
+1280,53.0,Basic,Smart TV,163.0,43.7,Documentary,India,249
+1152,57.0,Premium,Laptop,37.0,82.9,Thriller,Canada,499
+1196,54.0,Premium,Mobile,119.0,21.7,Romance,Japan,499
+1048,,Premium,Tablet,,,Action,,549
+1123,39.0,Premium,Tablet,96.0,71.4,Action,Brazil,499
+1010,53.0,Basic,Laptop,1.0,88.0,Thriller,Australia,199
+1312,,Free,Mobile,,,Comedy,Brazil,50
+1394,18.0,Basic,Mobile,101.0,74.2,Action,Brazil,199
+1372,37.0,Free,Laptop,1.0,53.2,Action,India,0
+1499,58.0,Free,Laptop,24.0,50.9,Drama,Australia,0
+1102,64.0,basic,Tablet,95.0,67.7,Comedy,Japan,249
+1227,42.0,Free,Smart TV,7.0,0.0,Romance,UK,0
+1118,31.0,Premium,Tablet,83.0,94.0,Thriller,Germany,499
+1305,,Free,Laptop,,,Horror,,0
+1367,19.0,Premium,Mobile,105.0,41.6,Horror,USA,499
+1228,18.0,Free,Tablet,41.0,53.6,Horror,Japan,0
+1452,34.0,Premium,Laptop,138.0,63.0,Thriller,India,499
+1146,25.0,Basic,Smart TV,42.0,51.4,Comedy,UK,249
+1187,44.0,Free,Mobile,7.0,97.6,Romance,Australia,0
+1494,28.0,Basic,Smart TV,142.0,32.4,Thriller,Canada,199
+1487,24.0,Free,Smart TV,54.0,92.8,Action,India,0
+1336,22.0,Basic,Mobile,42.0,12.8,Sci-Fi,Australia,249
+1063,41.0,Premium,Laptop,110.0,96.3,Thriller,India,549
+1199,53.0,Free,Tablet,63.0,85.2,Sci-Fi,Brazil,0
+1200,47.0,Free,Tablet,32.0,48.1,Sci-Fi,USA,0
+1163,38.0,Premium,Smart TV,99.0,63.2,Sci-Fi,Australia,499
+1019,43.0,Basic,Laptop,83.0,82.2,Action,Japan,199
+1330,39.0,Free,Mobile,43.0,71.4,Comedy,Germany,0
+1274,31.0,Free,Laptop,1.0,95.4,Action,UK,50
+1383,61.0,Free,Tablet,1.0,67.3,Drama,USA,0
+1001,53.0,Premium,Mobile,87.0,72.9,Thriller,Brazil,549
+1061,62.0,Basic,Tablet,50.0,41.2,Drama,Germany,199
+1109,27.0,Basic,Tablet,50.0,81.3,Action,Australia,249
+1308,21.0,Premium,Mobile,151.0,57.6,Comedy,Germany,499
+1139,51.0,Basic,Laptop,34.0,93.9,Documentary,Canada,199
+1219,21.0,free,Laptop,71.0,42.5,Horror,Australia,0
+1380,19.0,Premium,Tablet,117.0,37.6,Comedy,USA,549
+1437,27.0,Premium,Tablet,162.0,77.4,Thriller,Australia,499
+1213,40.0,Free,Mobile,131.0,73.1,Sci-Fi,USA,0
+1237,35.0,Premium,Tablet,42.0,37.5,Drama,UK,499
+1056,25.0,Premium,Mobile,144.0,100.0,Thriller,India,549
+1282,53.0,Premium,Tablet,179.0,64.2,Comedy,USA,499
+1069,56.0,Premium,Laptop,116.0,69.6,Action,Brazil,549
+1004,17.0,Free,Mobile,11.0,73.6,Action,Germany,50
+1421,33.0,Premium,Smart TV,76.0,100.0,Comedy,Germany,499
+1345,40.0,Premium,Tablet,149.0,75.6,Sci-Fi,UK,499
+1299,39.0,basic,Tablet,25.0,62.6,Thriller,Brazil,249
+1049,53.0,Basic,Smart TV,28.0,51.9,Comedy,USA,199
+1440,59.0,Free,Mobile,1.0,79.7,Drama,Australia,0
+1043,52.0,Free,Mobile,86.0,25.0,Documentary,India,0
+1116,23.0,Basic,Smart TV,82.0,81.8,Drama,India,199
+1027,18.0,Free,Smart TV,21.0,68.9,Drama,Canada,0
+1391,16.0,Free,Tablet,27.0,68.2,Thriller,Brazil,50
+1089,19.0,Free,Smart TV,1.0,100.0,Romance,India,50
+1248,57.0,Premium,Mobile,68.0,54.4,Sci-Fi,Brazil,499
+1251,52.0,Premium,Mobile,104.0,43.0,Horror,Australia,499
+1474,40.0,Premium,Mobile,139.0,29.0,Drama,Germany,499
+1130,41.0,Basic,Mobile,73.0,100.0,Romance,Australia,199
+1013,31.0,Premium,Mobile,142.0,29.5,Thriller,Germany,499
+1431,55.0,Free,Laptop,1.0,100.0,Action,Japan,50
+1153,37.0,Basic,Mobile,74.0,36.5,Romance,Japan,249
+1080,56.0,Free,Mobile,11.0,87.2,Romance,Brazil,50
+1284,18.0,Basic,Smart TV,86.0,100.0,Thriller,Brazil,249
+1077,65.0,Basic,Mobile,13.0,22.5,Comedy,UK,199
+1283,17.0,Basic,Tablet,1.0,52.5,Documentary,USA,199
+1090,40.0,Free,Laptop,9999.0,42.3,Romance,Germany,0
+1485,65.0,Premium,Laptop,91.0,49.1,Sci-Fi,Germany,499
+1175,36.0,Free,Laptop,5.0,28.5,Drama,Australia,50
+1303,65.0,Free,Laptop,10.0,86.1,Action,Canada,0
+1377,63.0, Basic ,Smart TV,41.0,100.0,Drama,Canada,199
+1025,53.0,Premium,Tablet,103.0,35.9,Documentary,Germany,499
+1162,36.0,FREE,Smart TV,60.0,40.5,Romance,Australia,0
+1350,36.0,Free,Smart TV,113.0,42.8,Documentary,Brazil,0
+1183,57.0,Basic,Tablet,1.0,91.0,Horror,Canada,249
+1448,61.0,Free,Laptop,65.0,2.7,Documentary,Germany,0
+1120,,Premium,Laptop,,,Sci-Fi,,549
+1202,,Basic,Mobile,,35.5,Drama,Japan,199
+1007,56.0,Free,Tablet,19.0,55.9,Documentary,Brazil,0
+1011,16.0,premium,Mobile,85.0,100.0,Romance,USA,499
+1231,46.0,Premium,Mobile,147.0,91.8,Comedy,Germany,499
+1302,64.0,Free,Mobile,1.0,38.2,Documentary,Japan,0
+1169,,Free,Smart TV,,,Documentary,,0
+1082,58.0,Premium,Laptop,80.0,65.4,Drama,Australia,499
+1224,46.0,Premium,Tablet,200.0,45.7,Romance,UK,499
+1353,33.0,Premium,Mobile,130.0,45.7,Romance,Japan,499
+1286,26.0,Basic,Tablet,82.0,21.7,Comedy,Australia,199
+1443,,Premium,Laptop,98.0,49.8,Romance,UK,499
+1373,28.0,Basic,Mobile,36.0,11.2,Documentary,UK,249
+1311,,Premium,Mobile,,,Thriller,,499
+1358,35.0,Premium,Smart TV,147.0,81.8,Romance,UK,549
+1456,22.0,Basic,Mobile,98.0,0.0,Romance,India,199
+1097,46.0,Free,Laptop,34.0,76.6,Drama,Brazil,0
+1407,65.0,Free,Smart TV,1.0,53.0,Sci-Fi,India,0
+1433,35.0,Free,Laptop,55.0,21.1,Drama,Brazil,0
+1475,55.0,Premium,Laptop,150.0,68.0,Sci-Fi,Canada,499
+1466,64.0,Premium,Laptop,55.0,54.4,Sci-Fi,India,499
+1084,54.0,Free,Smart TV,1.0,64.7,Thriller,Japan,0
+1093,44.0,Basic,Laptop,43.0,63.5,Horror,Germany,199
+1046,17.0,Free,Laptop,98.0,81.8,Comedy,Germany,0
+1328,48.0,Basic,Tablet,9.0,96.1,Comedy,Canada,199
+1047,40.0,Basic,Tablet,1.0,61.7,Action,UK,249
+1186,51.0,Free,Smart TV,125.0,44.9,Drama,USA,0
+1332,43.0,Free,Smart TV,37.0,77.7,Horror,Germany,0
+1376,51.0,Premium,Mobile,130.0,6.2,Comedy,India,499
+1278,,Free,Laptop,1.0,78.2,Drama,USA,50
+1016,29.0,Free,Laptop,25.0,52.5,Documentary,Germany,50
+1343,,Basic,Mobile,,60.9,Documentary,USA,199
+1416,56.0,Premium,Tablet,119.0,100.0,Action,USA,549
+1059,18.0,Free,Smart TV,1.0,31.7,Romance,India,50
+1497,63.0,Basic,Tablet,72.0,18.5,Sci-Fi,UK,199
+1361,50.0,Basic,Laptop,56.0,50.7,Sci-Fi,Germany,249
+1060,22.0,Basic,Laptop,76.0,83.5,Sci-Fi,Brazil,199
+1460,65.0,Basic,Laptop,6.0,67.0,Documentary,Japan,199
+1040,47.0,Premium,Tablet,167.0,86.6,Action,Germany,499
+1270,24.0,Basic,Tablet,9.0,100.0,Action,Japan,199
+1483,49.0,Free,Laptop,1.0,92.5,Thriller,Brazil,0
+1026,46.0,Free,Tablet,1.0,86.1,Comedy,India,50
+1298,43.0,Premium,Laptop,121.0,68.4,Comedy,Canada,549
+1423,47.0,Basic,Laptop,52.0,56.8,Sci-Fi,UK,249
+1085,33.0,Premium,Smart TV,78.0,57.1,Romance,UK,499
+1062,36.0,Basic,Smart TV,95.0,54.0,Thriller,India,199
+1052,63.0,Free,Tablet,17.0,54.9,Documentary,USA,50
+1352,37.0,Basic,Tablet,48.0,100.0,Documentary,UK,199
+1461,16.0,Free,Smart TV,95.0,57.5,Romance,India,0
+1451,23.0,Basic,Tablet,42.0,46.4,Action,Germany,199
+1012,58.0,Premium,Laptop,88.0,59.9,Documentary,Germany,499
+1241,16.0,Premium,Mobile,96.0,57.6,Sci-Fi,Brazil,549
+1417,23.0,free,Mobile,53.0,89.0,Sci-Fi,UK,50
+1018,39.0,Premium,Smart TV,123.0,15.9,Drama,Australia,499
+1470,53.0,Free,Tablet,1.0,85.8,Drama,Germany,0
+1068,,Basic,Laptop,,,Horror,,199
+1289,34.0,Basic,Laptop,40.0,74.9,Romance,Brazil,199
+1125,35.0, Basic ,Laptop,53.0,67.1,Documentary,USA,199
+1210,63.0,Premium,Tablet,185.0,93.6,Comedy,India,499
+1417,23.0,Free,Mobile,53.0,89.0,Sci-Fi,UK,50
+1346,,Basic,Laptop,115.0,83.1,Horror,Canada,199
+1214,61.0,Premium,Smart TV,103.0,49.3,Sci-Fi,Brazil,549
+1107,26.0,Basic,Mobile,122.0,49.0,Horror,Brazil,199
+1005,,Premium,Mobile,168.0,98.5,Action,Canada,499
+1434,58.0,Premium,Mobile,63.0,29.2,Drama,UK,499
+1103,39.0, Premium ,Laptop,-5.0,81.9,Comedy,Brazil,499
+1276,40.0,Premium,Smart TV,99.0,63.4,Action,Japan,499
+1364,54.0,Basic,Tablet,40.0,75.6,Romance,UK,199
+1254,31.0,Free,Smart TV,1.0,28.0,Documentary,Brazil,0
+1264,17.0,Free,Smart TV,17.0,43.5,Thriller,India,0
+1252,26.0,Free,Laptop,40.0,84.6,Drama,USA,50
+1094,19.0,Free,Mobile,17.0,73.1,Action,Canada,0
+1160,57.0,free,Laptop,64.0,44.5,Horror,Japan,0
+1317,18.0,Free,Tablet,72.0,34.3,Thriller,India,0
+1002,35.0,Free,Smart TV,20.0,54.1,Drama,USA,0
+1038,16.0,Premium,Tablet,79.0,71.4,Comedy,UK,549
+1285,15.0,Basic,Mobile,50.0,37.9,Thriller,Australia,249
+1167,51.0,Basic,Laptop,70.0,27.7,Documentary,Australia,199
+1445,23.0,Basic,Mobile,112.0,61.0,Horror,Australia,199
+1003,25.0,Premium,Mobile,121.0,85.3,Romance,India,549
+1096,59.0,Basic,Tablet,51.0,61.5,Documentary,India,249
+1024,51.0,Free,Smart TV,1.0,79.6,Horror,Canada,0
+1260,50.0,Basic,Laptop,10.0,63.6,Romance,Japan,249
+1341,,Basic,Mobile,,,Sci-Fi,,249
+1212,25.0,Premium,Mobile,70.0,56.9,Romance,USA,499
+1134,47.0,Basic,Laptop,55.0,98.2,Romance,UK,199
+1334,58.0,Premium,Tablet,124.0,20.5,Sci-Fi,Australia,549
+1287,60.0,PREMIUM,Tablet,143.0,65.2,Comedy,USA,499
+1143,,Free,Smart TV,,,Thriller,,0
+1397,35.0,Premium,Tablet,66.0,24.0,Romance,Japan,499
+1300,29.0,Premium,Laptop,111.0,44.2,Documentary,USA,499
+1230,48.0,PREMIUM,Tablet,95.0,58.3,Documentary,Australia,549
+1355,33.0,Free,Laptop,31.0,63.0,Sci-Fi,Germany,0
+1247,59.0,Free,Tablet,1.0,48.3,Horror,India,0
+1439,30.0,Free,Tablet,29.0,69.6,Horror,Australia,0
+1086,40.0,Free,Laptop,1.0,100.0,Documentary,India,0
+1250,,Premium,Laptop,,,Drama,,499
+1155,41.0,Free,Laptop,1.0,72.6,Sci-Fi,Australia,0
+1182,51.0,Free,Tablet,60.0,60.3,Action,Canada,0
+1075,21.0,Free,Tablet,87.0,60.2,Horror,India,0
+1297,25.0,Premium,Laptop,95.0,74.6,Drama,India,549
+1376,51.0,Premium,Mobile,130.0,6.2,Comedy,India,499
+1500,57.0,Premium,Laptop,121.0,17.1,Drama,India,499
+1129,,Basic,Mobile,28.0,26.6,Action,Canada,249
+1441,35.0,Basic,Tablet,50.0,50.1,Sci-Fi,Germany,249
+1021,23.0,Basic,Laptop,1.0,87.5,Comedy,Germany,249
+1457,18.0,Premium,Smart TV,119.0,35.8,Documentary,Brazil,499
+1331,41.0,Basic,Laptop,78.0,75.2,Drama,Germany,199
+1393,25.0,Basic,Laptop,50.0,84.1,Romance,Australia,199
+1292,61.0,Free,Tablet,33.0,22.5,Documentary,Australia,50
+1098,49.0,Free,Mobile,5.0,100.0,Romance,Japan,0
+1462,29.0,Free,Mobile,5.0,52.4,Drama,Japan,50
+1490,64.0,Free,Smart TV,1.0,50.7,Thriller,UK,0
+1291,17.0,Premium,Smart TV,128.0,72.7,Romance,Australia,499
+1253,59.0,Basic,Laptop,19.0,72.8,Romance,UK,199
+1070,60.0,Basic,Smart TV,69.0,39.8,Horror,Australia,199
+1088,62.0,BASIC,Tablet,70.0,100.0,Drama,Germany,249
+1115,52.0,Premium,Smart TV,119.0,47.3,Romance,Australia,499
+1479,22.0,Free,Laptop,41.0,80.0,Horror,Germany,0
+1444,16.0,Basic,Mobile,1.0,30.2,Documentary,Germany,199
+1484,50.0,Premium,Mobile,158.0,43.6,Documentary,Australia,499
+1197,20.0,Premium,Laptop,158.0,38.0,Thriller,USA,499
+1168,53.0,Basic,Laptop,63.0,38.1,Horror,Germany,199
+1105,49.0,Basic,Laptop,1.0,29.5,Drama,Germany,199
+1321,37.0,Free,Tablet,1.0,49.8,Action,Japan,0
+1491,54.0,Basic,Tablet,58.0,34.6,Sci-Fi,Germany,249
+1318,31.0,Free,Laptop,1.0,84.1,Action,UK,0
+1078,46.0,Basic,Laptop,40.0,62.0,Action,Japan,199
+1193,54.0,Free,Laptop,2.0,4.2,Horror,Australia,0
+1055,34.0,Basic,Smart TV,70.0,68.7,Comedy,Australia,249
+1020,49.0,Free,Smart TV,1.0,52.3,Thriller,Japan,0
+1498,27.0,Premium,Tablet,124.0,100.0,Horror,Germany,499
+1179,22.0,Free,Tablet,79.0,57.9,Sci-Fi,USA,0
+1258,54.0,Premium,Laptop,72.0,100.0,Comedy,Canada,499
+1256,65.0,Premium,Laptop,85.0,24.8,Comedy,Australia,549
+1216,40.0,Basic,Smart TV,50.0,75.7,Sci-Fi,UK,199
+1426,39.0,Premium,Mobile,77.0,100.0,Drama,Japan,499
+1194,47.0,Free,Tablet,30.0,100.0,Horror,Canada,0
+1131,34.0,Free,Laptop,1.0,77.0,Horror,Canada,0
+1472,59.0,Basic,Laptop,55.0,49.1,Romance,UK,199
+1101,43.0,Premium,Tablet,86.0,81.2,Thriller,Germany,549
+1172,63.0,Free,Smart TV,1.0,86.7,Horror,Germany,0
+1450,20.0,Basic,Tablet,45.0,48.7,Thriller,USA,199
+1387,31.0,Free,Laptop,37.0,64.2,Action,USA,0
+1489,18.0,FREE,Tablet,55.0,90.6,Documentary,Australia,0
+1144,58.0,Free,Smart TV,71.0,64.2,Sci-Fi,USA,0
+1453,39.0,Basic,Tablet,1.0,54.5,Sci-Fi,Brazil,199
+1347,23.0,Basic,Laptop,132.0,68.9,Thriller,Japan,249
+1203,22.0,Basic,Tablet,42.0,46.2,Horror,Canada,249
+1201,19.0,Basic,Laptop,46.0,80.7,Romance,Japan,199
+1316,36.0,Premium,Tablet,117.0,70.2,Horror,India,499
+1149,52.0,Free,Smart TV,64.0,57.4,Comedy,Brazil,0
+1269,40.0,Basic,Mobile,65.0,50.4,Documentary,Germany,249
+1122,42.0,Basic,Laptop,55.0,70.0,Action,Brazil,199
+1137,48.0,Free,Tablet,43.0,100.0,Drama,India,0
+1475,55.0,Premium,Laptop,150.0,68.0,Sci-Fi,Canada,499
+1459,20.0,Premium,Mobile,43.0,91.4,Drama,USA,499
+1058,49.0,Basic,Tablet,12.0,76.4,Action,Canada,199
+1195,31.0,Basic,Tablet,50.0,80.6,Sci-Fi,USA,199
+1271,28.0,Free,Laptop,44.0,45.3,Documentary,India,0
+1162,36.0,Free,Smart TV,60.0,40.5,Romance,Australia,0
+1064,61.0,Premium,Tablet,53.0,59.1,Drama,India,499
+1071,37.0,Basic,Mobile,62.0,31.4,Thriller,Australia,199
+1374,44.0,Free,Mobile,23.0,31.4,Horror,Australia,50
+1272,62.0,Basic,Laptop,52.0,35.9,Action,USA,199
+1427,53.0,Premium,Mobile,151.0,47.0,Sci-Fi,Australia,549
+1267,31.0,Basic,Tablet,111.0,86.6,Drama,Canada,199
+1382,57.0,Basic,Tablet,62.0,70.0,Thriller,Japan,249
+1410,56.0,premium,Tablet,170.0,79.3,Documentary,Japan,499
+1170,17.0,Premium,Smart TV,98.0,100.0,Action,Germany,549
+1037,63.0,Free,Smart TV,1.0,39.4,Comedy,USA,0
+1244,36.0,Basic,Laptop,45.0,66.4,Action,Canada,199
+1083,46.0,Premium,Tablet,205.0,100.0,Thriller,USA,499
+1261,57.0,Free,Smart TV,44.0,33.8,Sci-Fi,India,0
+1349,61.0,Basic,Laptop,64.0,83.8,Drama,Japan,199
+1473,25.0,Basic,Smart TV,107.0,56.0,Romance,Australia,199
+1023,54.0,Basic,Tablet,78.0,17.9,Drama,Brazil,199
+1338,61.0,Basic,Mobile,1.0,79.0,Horror,Australia,199
+1309,24.0,Basic,Tablet,38.0,76.0,Sci-Fi,Japan,199
+1486,,Free,Laptop,,,Horror,,50
+1240,61.0,Premium,Laptop,50.0,88.5,Sci-Fi,Brazil,499
+1221,21.0,Basic,Tablet,58.0,70.7,Sci-Fi,Japan,249
+1014,20.0,Basic,Mobile,72.0,25.2,Action,USA,199
+1396,15.0,Free,Laptop,34.0,34.3,Romance,Canada,0
+1161,49.0,Basic,Laptop,38.0,45.6,Thriller,Germany,199
+1073,62.0,Premium,Laptop,37.0,71.7,Drama,Japan,499
+1178,65.0,Free,Laptop,52.0,80.8,Sci-Fi,USA,0
+1277,63.0,Free,Mobile,9999.0,72.1,Horror,UK,0
+1368,61.0,Free,Laptop,91.0,100.0,Sci-Fi,UK,50
+1036,46.0,Free,Laptop,105.0,64.4,Horror,Germany,0
+1327,33.0,Free,Tablet,65.0,54.8,Comedy,Germany,0
+1208,47.0,Premium,Tablet,114.0,78.1,Thriller,Germany,549
+1226,28.0,Free,Tablet,39.0,100.0,Comedy,Australia,0
+1121,34.0,Premium,Tablet,160.0,79.3,Drama,Australia,499
+1217,41.0,Basic,Smart TV,46.0,100.0,Drama,USA,199
+1030,56.0,Premium,Mobile,130.0,89.0,Horror,Japan,499
+1348,22.0, Free ,Laptop,65.0,75.9,Comedy,Canada,0
+1189,43.0,Free,Laptop,43.0,49.7,Horror,Australia,0
+1478,54.0,Free,Smart TV,116.0,44.9,Horror,Brazil,0
+1326,61.0,Basic,Smart TV,133.0,33.2,Sci-Fi,Japan,199
+1181,61.0,Premium,Laptop,149.0,79.1,Comedy,Germany,499
+1234,,Free,Laptop,1.0,77.8,Thriller,India,0
+1415,21.0,Basic,Tablet,41.0,88.8,Action,Brazil,199
+1442,53.0,Basic,Smart TV,71.0,85.0,Documentary,Japan,249
+1166,52.0,Premium,Laptop,45.0,65.1,Sci-Fi,Japan,499
+1127,17.0,premium,Smart TV,105.0,84.4,Action,USA,549
+1495,44.0,Basic,Smart TV,68.0,72.8,Horror,India,199
+1265,63.0,Basic,Tablet,7.0,54.3,Comedy,USA,199
+1065,62.0,Premium,Mobile,67.0,72.1,Drama,USA,549
+1436,22.0,Free,Mobile,1.0,64.0,Horror,Germany,0
+1215,40.0,Premium,Laptop,69.0,18.6,Romance,Australia,499
+1455,55.0,Free,Laptop,50.0,84.9,Documentary,Canada,0
+1385,15.0,Basic,Tablet,31.0,72.1,Thriller,Canada,199
+1339,39.0,Basic,Mobile,74.0,72.0,Thriller,Japan,249
+1435,,free,Laptop,,,Thriller,,0
+1176,18.0,Free,Mobile,61.0,63.6,Horror,Australia,0
+1399,47.0,Premium,Laptop,84.0,26.9,Comedy,Canada,549
+1428,40.0,Premium,Laptop,137.0,53.2,Drama,UK,499
+1173,20.0,Basic,Smart TV,69.0,81.0,Horror,India,199
+1333,29.0,Free,Smart TV,1.0,58.8,Comedy,UK,0
+1033,53.0,Premium,Mobile,99.0,71.5,Horror,Germany,499
+1032,,Basic,Mobile,,,Horror,,199
+1233,22.0,Basic,Mobile,63.0,56.7,Comedy,Australia,199
+1236,60.0,Basic,Tablet,45.0,89.0,Drama,Germany,199
+1375,,Premium,Smart TV,,22.2,Sci-Fi,Australia,499
+1398,29.0,Free,Tablet,1.0,98.8,Sci-Fi,Japan,0
+1409,43.0,Basic,Tablet,67.0,94.8,Thriller,UK,249
+1188,25.0,Premium,Tablet,113.0,56.1,Horror,India,499
+1174,,Premium,Smart TV,,55.1,Horror,India,499
+1419,41.0,Premium,Laptop,81.0,82.4,Comedy,Brazil,499
+1390,62.0,Premium,Tablet,79.0,67.4,Drama,UK,549
+1476,35.0,Basic,Smart TV,71.0,41.7,Sci-Fi,Japan,199
+1304,54.0,Premium,Mobile,44.0,71.6,Horror,India,499
+1039,31.0,Free,Tablet,12.0,57.9,Drama,Brazil,50
+1266,30.0,Free,Smart TV,45.0,75.3,Romance,Australia,0
+1464,54.0,Basic,Laptop,77.0,89.8,Drama,Canada,249
+1015,32.0,BASIC,Laptop,68.0,82.0,Sci-Fi,Japan,249
+1095,33.0,Basic,Laptop,106.0,60.3,Comedy,Brazil,199
+1017,59.0, Premium ,Laptop,140.0,46.5,Comedy,UK,499
+1392,27.0,Free,Mobile,43.0,95.9,Action,India,0
+1342,47.0,Basic,Tablet,51.0,60.7,Drama,India,249
+1218,58.0,Basic,Tablet,52.0,67.8,Documentary,Brazil,199
+1290,,Basic,Tablet,,,Comedy,,199
+1414,56.0,Premium,Tablet,104.0,79.9,Comedy,Brazil,499
+1002,35.0,Free,Smart TV,20.0,54.1,Drama,USA,0
+1079,36.0,Free,Laptop,13.0,62.0,Sci-Fi,Brazil,50
+1092,40.0,Free,Tablet,1.0,34.4,Action,Germany,0
+1388,26.0,Premium,Laptop,117.0,53.5,Drama,India,549
+1184,24.0,Basic,Mobile,139.0,100.0,Comedy,Germany,199
+1381,56.0,Basic,Mobile,40.0,0.0,Action,UK,199
+1324,46.0,Premium,Tablet,119.0,45.9,Romance,Canada,499
+1268,22.0,Premium,Mobile,107.0,18.5,Sci-Fi,Canada,499
+1191,28.0,Basic,Mobile,1.0,69.0,Action,UK,199
+1226,28.0,Free,Tablet,39.0,100.0,Comedy,Australia,0
+1110,55.0,Premium,Smart TV,93.0,84.6,Comedy,Brazil,549
+1365,22.0,Free,Smart TV,96.0,21.5,Horror,India,0
+1357,29.0,Basic,Mobile,49.0,18.3,Thriller,Japan,199
+1136,36.0,Premium,Mobile,120.0,90.8,Comedy,Canada,499
+1246,65.0,Premium,Laptop,178.0,62.2,Horror,Brazil,499
+1370,42.0,Basic,Mobile,92.0,28.9,Romance,India,199
+1275,59.0,Premium,Smart TV,118.0,48.0,Comedy,Germany,549
+1148,29.0,Premium,Tablet,145.0,56.6,Romance,Germany,549
+1106,46.0,Basic,Tablet,81.0,54.9,Drama,Brazil,199
+1295,49.0,Free,Tablet,1.0,42.4,Comedy,USA,0
+1325,25.0,Basic,Mobile,51.0,31.3,Romance,India,199
+1259,38.0,Free,Laptop,33.0,64.5,Comedy,Australia,0
+1288,39.0,Basic,Smart TV,56.0,61.4,Comedy,UK,249
+1496,60.0,Free,Laptop,1.0,88.4,Comedy,Japan,0
+1180,,Premium,Mobile,135.0,39.6,Drama,UK,549
+1362,,Premium,Smart TV,162.0,71.0,Horror,Australia,499
+1165,57.0,FREE,Tablet,1.0,62.0,Action,Brazil,0
+1111,28.0,Premium,Laptop,101.0,100.0,Comedy,Germany,499
+1389,47.0,Basic,Laptop,84.0,63.5,Drama,Australia,199
+1465,43.0,Premium,Laptop,129.0,100.0,Documentary,Australia,499
+1257,25.0,Free,Smart TV,83.0,37.9,Action,Canada,0
+1315,42.0,Basic,Tablet,84.0,64.7,Comedy,Brazil,199
+1006,58.0,Free,Tablet,30.0,49.3,Horror,India,0
+1463,30.0,Basic,Tablet,60.0,41.8,Drama,UK,199
+1145,31.0,Premium,Smart TV,135.0,94.2,Sci-Fi,Brazil,499
+1104,51.0,Premium,Laptop,139.0,75.3,Romance,Japan,499
+1211,65.0,Premium,Smart TV,117.0,62.5,Drama,Brazil,499
+1386,19.0,Basic,Laptop,55.0,59.3,Thriller,Japan,199
+1436,22.0,Free,Mobile,1.0,64.0,Horror,Germany,0
+1042,18.0,Basic,Tablet,51.0,42.8,Comedy,Germany,199
+1363,56.0,Free,Laptop,1.0,21.3,Sci-Fi,Australia,0
+1138,52.0,Basic,Tablet,66.0,80.2,Documentary,Germany,199
+1378,29.0,Free,Laptop,93.0,100.0,Action,Brazil,50
+1255,60.0,Free,Laptop,16.0,65.0,Sci-Fi,Brazil,50
+1147,,Basic,Mobile,,,Thriller,,199
+1126,34.0,Free,Smart TV,1.0,35.8,Action,Canada,0
+1087,15.0,Basic,Smart TV,1.0,51.4,Action,USA,199
+1469,29.0,Basic,Smart TV,129.0,79.9,Thriller,Australia,249
+1031,42.0,Free,Laptop,8.0,72.8,Romance,UK,0
+1432,16.0,Premium,Laptop,89.0,65.1,Comedy,Brazil,549
+1066,,Premium,Mobile,,,Action,Canada,499
+1204,59.0,PREMIUM,Mobile,144.0,93.9,Sci-Fi,USA,499
+1206,34.0,Basic,Mobile,1.0,97.4,Sci-Fi,Canada,199
+1045,23.0,Free,Mobile,1.0,45.8,Action,USA,0
+1028,29.0, Premium ,Mobile,78.0,78.6,Romance,Canada,549
+1081,51.0,Free,Mobile,92.0,63.2,Documentary,UK,50
+1488,29.0,Premium,Smart TV,97.0,53.7,Action,India,499
+1438,30.0,Premium,Laptop,47.0,14.5,Horror,Australia,499
+1114,26.0,Basic,Mobile,95.0,72.4,Sci-Fi,Canada,199
+1400,52.0,Free,Tablet,36.0,42.5,Drama,Brazil,0
+1205,50.0, Basic ,Laptop,1.0,67.0,Documentary,USA,199
+1008,65.0,Free,Smart TV,35.0,59.1,Documentary,USA,0
+1209,19.0,Basic,Smart TV,68.0,71.1,Horror,Australia,199
+1159,41.0,Basic,Laptop,32.0,65.3,Drama,Australia,199
+1113,50.0,Free,Mobile,102.0,70.1,Thriller,Germany,0
+1412,21.0,Basic,Laptop,21.0,73.8,Horror,Germany,199
+1447,36.0,Basic,Tablet,1.0,90.5,Romance,Germany,249
+1232,17.0,Premium,Laptop,138.0,31.8,Action,USA,499
+1229,17.0,Premium,Tablet,53.0,40.6,Comedy,Japan,499
+1009,17.0,Free,Tablet,46.0,80.8,Comedy,Japan,0
+1074,49.0,Free,Smart TV,56.0,24.1,Documentary,Brazil,50
+1401,28.0,Basic,Mobile,32.0,100.0,Comedy,Japan,199
+1119,33.0,Free,Tablet,42.0,96.9,Drama,Australia,0
+1207,40.0,Free,Smart TV,37.0,100.0,Documentary,Australia,0
