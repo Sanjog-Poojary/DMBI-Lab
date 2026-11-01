@@ -1,0 +1,12 @@
+Reference Paper for CA3 (Content Beyond Syllabus)
+Topic: Collaborative Filtering Recommender Systems with Matrix Factorization for Streaming Platforms
+
+Reference (Verify before submission):
+Koren, Y., Bell, R., & Volinsky, C. (2009). Matrix factorization techniques for recommender systems. Computer, 42(8), 30–37. https://doi.org/10.1109/MC.2009.263
+
+Abstract Summary:
+As the Netflix Prize competition demonstrated, matrix factorization models are superior to classic nearest-neighbor techniques for producing product recommendations, allowing the incorporation of additional information such as implicit feedback, temporal effects, and confidence levels. This paper details the mathematical foundation of Singular Value Decomposition (SVD), Alternating Least Squares (ALS), and Stochastic Gradient Descent (SGD) for latent factor collaborative filtering.
+
+Relevance to CA3 Coursework:
+- Extends syllabus Module V & VI (which focus primarily on market basket analysis and Apriori association rules) into latent factor collaborative filtering.
+- Implements low-rank decomposition of user-item interaction matrices to capture latent viewing preferences without requiring handcrafted rules.

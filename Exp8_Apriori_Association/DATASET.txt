@@ -1,0 +1,3 @@
+Dataset: JioHotstar Preprocessed Dataset (33,171 rows x 24 columns).
+Place the CSV in this folder as JioHotstar_Preprocessed_Dataset.csv.
+The CSV is not included in this package.

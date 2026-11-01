@@ -1,0 +1,18 @@
+Reference Paper for CA1 Case Study
+Topic: Diagnosing Subscriber Churn on a Video Streaming Platform: A Case Study
+
+Title:
+Customer churn prediction system: a machine learning approach
+
+Authors:
+Praveen Lalwani, Manas Kumar Mishra, Jasroop Singh Chadhar, Pooja Sethi
+
+Journal / Publication:
+Computing, 104(2), 271–294 (2022)
+
+DOI / URL (Placeholder - verify before submission):
+https://doi.org/10.1007/s00607-021-00908-y
+[VERIFY BEFORE SUBMISSION: Confirm relevance to your specific case-study presentation and syllabus requirements]
+
+Alternative Reference:
+Coussement, K., & De Bock, K. W. (2013). Customer churn prediction in the subscription industry: An evaluation of data mining techniques. Expert Systems with Applications, 40(6), 2164–2174. https://doi.org/10.1016/j.eswa.2012.10.024

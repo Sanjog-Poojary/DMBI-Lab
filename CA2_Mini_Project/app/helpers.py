@@ -25,9 +25,9 @@ def repo_root():
 
 
 def add_src_to_path():
-    """Add CA1_CA2_POC/src and CA3/src to sys.path so imports work."""
+    """Add CA2_Mini_Project/src and CA3/src to sys.path so imports work."""
     r_root = repo_root()
-    for sub in ("CA1_CA2_POC/src", "CA3/src"):
+    for sub in ("CA2_Mini_Project/src", "CA3/src"):
         p = os.path.join(r_root, sub)
         if p not in sys.path:
             sys.path.insert(0, p)

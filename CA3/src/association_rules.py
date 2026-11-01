@@ -18,6 +18,8 @@ import pandas as pd
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _DATA = os.path.join(_HERE, "..", "data", "viewing_sessions.csv")
+if not os.path.exists(_DATA):
+    _DATA = os.path.abspath(os.path.join(_HERE, "..", "..", "CA3", "data", "viewing_sessions.csv"))
 _OUT_DIR = os.path.join(_HERE, "..", "outputs")
 _OUT_CSV = os.path.join(_OUT_DIR, "association_rules.csv")
 

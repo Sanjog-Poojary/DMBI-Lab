@@ -10,7 +10,7 @@ echo Starting Streamlit app from: %CD%
 echo Default browser will open at: http://localhost:8501
 echo.
 
-python -m streamlit run CA1_CA2_POC\app\app.py
+python -m streamlit run CA2_Mini_Project\app\app.py
 
 if %ERRORLEVEL% NEQ 0 (
     echo.

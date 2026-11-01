@@ -1,0 +1,34 @@
+{
+  "dataset_summary": {
+    "total_users": 500,
+    "total_genres": 8,
+    "total_observed_interactions": 3002,
+    "train_interactions": 2401,
+    "test_interactions": 601,
+    "evaluated_test_users": 349,
+    "top_k": 3,
+    "rank": 8,
+    "regularization": 0.1,
+    "random_state": 42
+  },
+  "hit_rate_user_level": {
+    "Popularity": 0.9341,
+    "Association Rules": 0.9713,
+    "Matrix Factorization": 0.9713
+  },
+  "hit_rate_interaction_level": {
+    "Popularity": 0.822,
+    "Association Rules": 0.8752,
+    "Matrix Factorization": 0.8602
+  },
+  "user_hit_counts": {
+    "Popularity": "326/349",
+    "Association Rules": "339/349",
+    "Matrix Factorization": "339/349"
+  },
+  "interaction_hit_counts": {
+    "Popularity": "494/601",
+    "Association Rules": "526/601",
+    "Matrix Factorization": "517/601"
+  }
+}

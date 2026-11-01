@@ -2,7 +2,7 @@
 app.py — DMBI Streaming Platform BI Dashboard.
 
 Run from repo root:
-    streamlit run CA1_CA2_POC/app/app.py
+    streamlit run CA2_Mini_Project/app/app.py
 """
 
 import os
@@ -16,7 +16,7 @@ import streamlit as st
 # ── Path setup ────────────────────────────────────────────────────────────────
 _APP_DIR = os.path.dirname(os.path.abspath(__file__))
 _REPO    = os.path.abspath(os.path.join(_APP_DIR, "..", ".."))
-for _p in (os.path.join(_REPO, "CA1_CA2_POC", "src"),
+for _p in (os.path.join(_REPO, "CA2_Mini_Project", "src"),
            os.path.join(_REPO, "CA3", "src"),
            _APP_DIR):
     if _p not in sys.path:
@@ -27,7 +27,7 @@ import poc_pipeline as pp
 from association_rules import build_baskets, apriori, association_rules, recommend
 
 # ── Paths to data ──────────────────────────────────────────────────────────────
-_CSV_MAIN = os.path.join(_REPO, "CA1_CA2_POC", "data", "streaming_platform_dataset.csv")
+_CSV_MAIN = os.path.join(_REPO, "CA2_Mini_Project", "data", "streaming_platform_dataset.csv")
 _CSV_CA3  = os.path.join(_REPO, "CA3", "data", "viewing_sessions.csv")
 
 # ── Page config ───────────────────────────────────────────────────────────────
