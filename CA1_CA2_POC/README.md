@@ -73,13 +73,15 @@ Generated from `streaming_platform_dataset.csv` (515 rows, seed = 42):
 | Metric | Value |
 |---|---|
 | Raw rows | 515 |
-| Cleaned rows | 500 |
+| Cleaned rows | 502 |
+| Fact rows | 502 |
 | IQR outliers | 2 |
 | Isolation Forest outliers | 25 |
 | Best k (K-Means) | 2 |
 | DBSCAN noise points | 2 |
 | Decision Tree holdout accuracy | 0.594 |
 | Decision Tree holdout recall | 0.400 |
-| Naive Bayes holdout accuracy | 0.700 |
-| Random Forest holdout accuracy | 0.700 |
-
+| Naive Bayes holdout accuracy | 0.525 |
+| Naive Bayes holdout recall | 0.467 |
+| Random Forest holdout accuracy | 0.604 |
+| Random Forest holdout recall | 0.200 |

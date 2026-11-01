@@ -12,8 +12,14 @@ Public API:
 """
 
 from itertools import combinations
+import os
 
 import pandas as pd
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_DATA = os.path.join(_HERE, "..", "data", "viewing_sessions.csv")
+_OUT_DIR = os.path.join(_HERE, "..", "outputs")
+_OUT_CSV = os.path.join(_OUT_DIR, "association_rules.csv")
 
 
 # ── helpers ──────────────────────────────────────────────────────────────────
@@ -137,3 +143,61 @@ def recommend(user_genres_set, rules_df, top_n=5):
 
     return sorted(recs, key=recs.get, reverse=True)[:top_n]
 
+
+def main():
+    if not os.path.exists(_DATA):
+        print(f"Dataset not found at {_DATA}")
+        return
+
+    sessions_df = pd.read_csv(_DATA)
+    baskets = build_baskets(sessions_df)
+    n_users = sessions_df["user_id"].nunique()
+
+    frequent = apriori(baskets, min_support=0.05)
+    rules_df = association_rules(frequent, min_confidence=0.4, min_lift=1.1)
+
+    print(f"Number of users: {n_users}")
+    print(f"Frequent itemsets: {len(frequent)}")
+    print(f"Association rules: {len(rules_df)}")
+    print("\n--- Top 10 Association Rules by Lift ---")
+    print(rules_df.head(10).to_string(index=False))
+
+    os.makedirs(_OUT_DIR, exist_ok=True)
+    rules_df.to_csv(_OUT_CSV, index=False)
+    print(f"\nRules saved to: {_OUT_CSV}")
+
+    # Sample user recommendations
+    sample_uid = None
+    sample_recs = []
+    sample_genres = set()
+    for uid in sessions_df["user_id"].unique():
+        ug = set(
+            sessions_df[sessions_df["user_id"] == uid]["genres_watched"]
+            .str.split(",")
+            .explode()
+            .str.strip()
+            .unique()
+        )
+        r = recommend(ug, rules_df, top_n=5)
+        if r:
+            sample_uid = uid
+            sample_genres = ug
+            sample_recs = r
+            break
+    if sample_uid is None:
+        sample_uid = sessions_df["user_id"].iloc[0]
+        sample_genres = set(
+            sessions_df[sessions_df["user_id"] == sample_uid]["genres_watched"]
+            .str.split(",")
+            .explode()
+            .str.strip()
+            .unique()
+        )
+        sample_recs = recommend(sample_genres, rules_df, top_n=5)
+
+    print(f"\nSample user {sample_uid} watched: {sorted(sample_genres)}")
+    print(f"Recommended genres: {sample_recs}")
+
+
+if __name__ == "__main__":
+    main()

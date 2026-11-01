@@ -1,0 +1,11 @@
+antecedent,consequent,support,confidence,lift
+Comedy,Romance,0.1615,0.7075,3.1437
+Romance,Comedy,0.1615,0.7177,3.1437
+Drama,Documentary,0.1641,0.7141,3.098
+Documentary,Drama,0.1641,0.7118,3.098
+Horror,Thriller,0.1441,0.6977,2.4739
+Thriller,Horror,0.1441,0.5109,2.4739
+Sci-Fi,Action,0.1441,0.681,2.427
+Action,Sci-Fi,0.1441,0.5136,2.427
+Action,Thriller,0.1434,0.511,1.8118
+Thriller,Action,0.1434,0.5084,1.8118

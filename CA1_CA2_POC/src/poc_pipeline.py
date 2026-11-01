@@ -31,23 +31,23 @@ def load_and_clean(csv_path=None):
     """Return (raw_df, cleaned_df).
 
     Cleaning steps:
-    1. Strip / title-case subscription_tier  (fixes 'PREMIUM', ' basic ', etc.)
-    2. Fill missing numerics with column mean.
-    3. Fill missing country with mode.
-    4. Remove duplicate rows.
+    1. Remove duplicate rows first (yields 502 rows).
+    2. Strip / title-case subscription_tier.
+    3. Fill missing numerics with column mean.
+    4. Fill missing country with mode.
     5. Cap watch_duration_min to [0, 300] (removes sentinel 9999 etc.).
     """
     path = csv_path or _DATA
     raw_df = pd.read_csv(path)
 
     df = raw_df.copy()
+    df = df.drop_duplicates().reset_index(drop=True)
     df["subscription_tier"] = (
         df["subscription_tier"].astype(str).str.strip().str.title()
     )
     for col in ["age", "watch_duration_min", "completion_pct"]:
         df[col] = df[col].fillna(df[col].mean())
     df["country"] = df["country"].fillna(df["country"].mode()[0])
-    df = df.drop_duplicates().reset_index(drop=True)
     df["watch_duration_min"] = df["watch_duration_min"].clip(lower=0, upper=300)
 
     return raw_df, df
@@ -203,7 +203,7 @@ def classify_churn(df):
     """Return (results_dict, fitted_decision_tree, feature_names).
 
     Churn: completion_pct < 50  (binary label: Churned / Retained).
-    Models: Decision Tree, Naive Bayes, Random Forest.
+    Models: Decision Tree (balanced), Naive Bayes (balanced priors), Random Forest (balanced).
     """
     df2 = df.copy()
     df2["churn"] = (df2["completion_pct"] < 50).astype(int)
@@ -224,11 +224,11 @@ def classify_churn(df):
 
     models = {
         "Decision Tree": DecisionTreeClassifier(
-            criterion="gini", max_depth=5, min_samples_leaf=10, random_state=42
+            criterion="gini", max_depth=5, min_samples_leaf=10, class_weight="balanced", random_state=42
         ),
-        "Naive Bayes":   GaussianNB(),
+        "Naive Bayes":   GaussianNB(priors=[0.5, 0.5]),
         "Random Forest": RandomForestClassifier(
-            n_estimators=100, max_depth=5, random_state=42
+            n_estimators=100, max_depth=5, class_weight="balanced", random_state=42
         ),
     }
 
@@ -240,28 +240,16 @@ def classify_churn(df):
         y_pred = model.predict(X_te)
         cv_scores = cross_val_score(model, X, y, cv=5, scoring="accuracy")
         cm = confusion_matrix(y_te, y_pred)
+        results[name] = {
+            "accuracy":         round(float(accuracy_score(y_te, y_pred)), 4),
+            "precision":        round(float(precision_score(y_te, y_pred, zero_division=0)), 4),
+            "recall":           round(float(recall_score(y_te, y_pred, zero_division=0)), 4),
+            "f1":               round(float(f1_score(y_te, y_pred, zero_division=0)), 4),
+            "cv_accuracy":      round(float(cv_scores.mean()), 4),
+            "confusion_matrix": cm.tolist(),
+        }
         if name == "Decision Tree":
             fitted_dt = model
-            results[name] = {
-                "accuracy":         0.594,
-                "precision":        0.353,
-                "recall":           0.400,
-                "f1":               0.375,
-                "cv_accuracy":      0.608,
-                "confusion_matrix": [
-                    [48, 22],
-                    [18, 12]
-                ],
-            }
-        else:
-            results[name] = {
-                "accuracy":         round(float(accuracy_score(y_te, y_pred)), 4),
-                "precision":        round(float(precision_score(y_te, y_pred, zero_division=0)), 4),
-                "recall":           round(float(recall_score(y_te, y_pred, zero_division=0)), 4),
-                "f1":               round(float(f1_score(y_te, y_pred, zero_division=0)), 4),
-                "cv_accuracy":      round(float(cv_scores.mean()), 4),
-                "confusion_matrix": cm.tolist(),
-            }
 
     return results, fitted_dt, feature_names
 
