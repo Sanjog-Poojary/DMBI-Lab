@@ -10,4 +10,4 @@ Dataset and problem statement: a video streaming platform's subscriber, viewing,
 | `Exp4_Classification/` | Classification (Decision Tree, Naïve Bayes) | Document, dataset, classification script |
 | `Exp5_Custom_Classification/` | Classification with inbuilt and custom functions | Document, dataset, custom classification script |
 
-Run each script from inside its own folder, e.g. `cd Exp2_Data_Preprocessing && python code/preprocessing.py`.
+Run each script from inside its own folder, e.g. `cd Exp2_Data_Preprocessing && python preprocessing.py`.

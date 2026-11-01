@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -14,7 +15,8 @@ import json
 np.random.seed(42)
 
 # ---- Load & clean (same as Experiment 2) ----
-df = pd.read_csv('dataset/streaming_platform_dataset.csv')
+data_path = 'streaming_platform_dataset.csv' if os.path.exists('streaming_platform_dataset.csv') else 'dataset/streaming_platform_dataset.csv'
+df = pd.read_csv(data_path)
 df = df.drop_duplicates()
 
 num_cols = ['age', 'watch_duration_min', 'completion_pct']
@@ -68,12 +70,22 @@ def evaluate(name, y_true, y_pred):
 
 
 def save_cm(cm, title, fname, cmap):
-    import seaborn as sns
-    plt.figure(figsize=(5, 4))
-    sns.heatmap(cm, annot=True, fmt='d', cmap=cmap, xticklabels=classes,
-                yticklabels=classes, cbar=False)
+    try:
+        import seaborn as sns
+        plt.figure(figsize=(5, 4))
+        sns.heatmap(cm, annot=True, fmt='d', cmap=cmap, xticklabels=classes,
+                    yticklabels=classes, cbar=False)
+    except ImportError:
+        plt.figure(figsize=(5, 4))
+        plt.imshow(cm, cmap=cmap)
+        for i in range(len(classes)):
+            for j in range(len(classes)):
+                plt.text(j, i, str(cm[i, j]), ha="center", va="center", color="black")
+        plt.xticks(range(len(classes)), classes)
+        plt.yticks(range(len(classes)), classes)
     plt.title(title)
-    plt.xlabel('Predicted'); plt.ylabel('Actual')
+    plt.xlabel('Predicted')
+    plt.ylabel('Actual')
     plt.tight_layout()
     plt.savefig(fname, dpi=150)
     plt.close()

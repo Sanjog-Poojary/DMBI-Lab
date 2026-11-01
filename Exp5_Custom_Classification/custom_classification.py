@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -8,13 +9,18 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-import seaborn as sns
 import json
+
+try:
+    import seaborn as sns
+except ImportError:
+    sns = None
 
 np.random.seed(42)
 
 # ============ 1) LOAD & PREPROCESS (as in Experiment 2) ============
-df = pd.read_csv('dataset/streaming_platform_dataset.csv')
+data_path = 'streaming_platform_dataset.csv' if os.path.exists('streaming_platform_dataset.csv') else 'dataset/streaming_platform_dataset.csv'
+df = pd.read_csv(data_path)
 df = df.drop_duplicates()
 for col in ['age', 'watch_duration_min', 'completion_pct']:
     df[col] = df[col].fillna(df[col].mean())
@@ -57,10 +63,19 @@ def eval_and_store(name, y_true, y_pred):
 
 def save_cm(cm, title, fname, cmap):
     plt.figure(figsize=(5, 4))
-    sns.heatmap(cm, annot=True, fmt='d', cmap=cmap, xticklabels=classes,
-                yticklabels=classes, cbar=False)
+    if sns is not None:
+        sns.heatmap(cm, annot=True, fmt='d', cmap=cmap, xticklabels=classes,
+                    yticklabels=classes, cbar=False)
+    else:
+        plt.imshow(cm, cmap=cmap)
+        for i in range(len(classes)):
+            for j in range(len(classes)):
+                plt.text(j, i, str(cm[i, j]), ha="center", va="center", color="black")
+        plt.xticks(range(len(classes)), classes)
+        plt.yticks(range(len(classes)), classes)
     plt.title(title)
-    plt.xlabel('Predicted'); plt.ylabel('Actual')
+    plt.xlabel('Predicted')
+    plt.ylabel('Actual')
     plt.tight_layout()
     plt.savefig(fname, dpi=150)
     plt.close()

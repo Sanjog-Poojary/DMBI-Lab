@@ -1,12 +1,17 @@
+import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 
-sns.set_style("whitegrid")
+try:
+    import seaborn as sns
+    sns.set_style("whitegrid")
+except ImportError:
+    sns = None
 
 # Load dataset
-df = pd.read_csv('dataset/streaming_platform_dataset.csv')
+data_path = 'streaming_platform_dataset.csv' if os.path.exists('streaming_platform_dataset.csv') else 'dataset/streaming_platform_dataset.csv'
+df = pd.read_csv(data_path)
 
 print("--- Dataset Information ---")
 print(df.info())
@@ -49,7 +54,10 @@ print(correlation_matrix.round(4))
 # ---- Task 4: Visualizations ----
 # 4a. Histogram of watch duration
 plt.figure(figsize=(10, 5))
-sns.histplot(data=df, x='watch_duration_min', bins=30, kde=True, color='#2b5c8f')
+if sns is not None:
+    sns.histplot(data=df, x='watch_duration_min', bins=30, kde=True, color='#2b5c8f')
+else:
+    plt.hist(df['watch_duration_min'].dropna(), bins=30, color='#2b5c8f', edgecolor='black')
 plt.title('Distribution of Watch Duration (Minutes)', fontsize=14)
 plt.xlabel('Watch Duration (min)')
 plt.ylabel('User Count')
@@ -57,7 +65,12 @@ plt.show()
 
 # 4b. Boxplot before cleanup (inconsistent casing in subscription_tier)
 plt.figure(figsize=(10, 5))
-sns.boxplot(data=df, x='subscription_tier', y='monthly_spend', palette='Blues_r')
+if sns is not None:
+    sns.boxplot(data=df, x='subscription_tier', y='monthly_spend', palette='Blues_r')
+else:
+    tiers = df['subscription_tier'].unique()
+    data = [df[df['subscription_tier'] == t]['monthly_spend'].dropna() for t in tiers]
+    plt.boxplot(data, tick_labels=tiers)
 plt.title('Boxplot of Monthly Spend by Subscription Tier', fontsize=14)
 plt.xlabel('Subscription Tier')
 plt.ylabel('Monthly Spend')
@@ -67,8 +80,13 @@ plt.show()
 # 4c. Boxplot after cleanup
 df['subscription_tier'] = df['subscription_tier'].astype(str).str.strip().str.title()
 plt.figure(figsize=(8, 5))
-sns.boxplot(data=df, x='subscription_tier', y='monthly_spend',
-            hue='subscription_tier', palette='Blues_r')
+if sns is not None:
+    sns.boxplot(data=df, x='subscription_tier', y='monthly_spend',
+                hue='subscription_tier', palette='Blues_r')
+else:
+    tiers = df['subscription_tier'].unique()
+    data = [df[df['subscription_tier'] == t]['monthly_spend'].dropna() for t in tiers]
+    plt.boxplot(data, tick_labels=tiers)
 plt.title('Boxplot of Monthly Spend by Subscription Tier', fontsize=14)
 plt.xlabel('Subscription Tier')
 plt.ylabel('Monthly Spend')
@@ -77,15 +95,27 @@ plt.show()
 
 # 4d. Correlation heatmap
 plt.figure(figsize=(8, 6))
-sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1, fmt='.3f', cbar=True)
+if sns is not None:
+    sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1, fmt='.3f', cbar=True)
+else:
+    plt.imshow(correlation_matrix, cmap='coolwarm', vmin=-1, vmax=1)
+    plt.colorbar()
+    plt.xticks(range(len(num_cols)), num_cols, rotation=45)
+    plt.yticks(range(len(num_cols)), num_cols)
+    for i in range(len(num_cols)):
+        for j in range(len(num_cols)):
+            plt.text(j, i, f"{correlation_matrix.iloc[i, j]:.3f}", ha="center", va="center", color="black")
 plt.title('Feature Correlation Heatmap', fontsize=14)
 plt.show()
 
 # 4e. Scatter: completion % vs watch duration
 plt.figure(figsize=(10, 6))
-sns.scatterplot(data=df, x='completion_pct', y='watch_duration_min', hue='genre', alpha=0.8)
+if sns is not None:
+    sns.scatterplot(data=df, x='completion_pct', y='watch_duration_min', hue='genre', alpha=0.8)
+    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+else:
+    plt.scatter(df['completion_pct'], df['watch_duration_min'], alpha=0.8, c='#2b5c8f')
 plt.title('Scatter Plot: Completion % vs Watch Duration', fontsize=14)
 plt.xlabel('Completion Percentage (%)')
 plt.ylabel('Watch Duration (Minutes)')
-plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.show()

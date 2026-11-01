@@ -1,9 +1,11 @@
+import os
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 # 1. Load Dataset
-df = pd.read_csv('dataset/streaming_platform_dataset.csv')
+data_path = 'streaming_platform_dataset.csv' if os.path.exists('streaming_platform_dataset.csv') else 'dataset/streaming_platform_dataset.csv'
+df = pd.read_csv(data_path)
 print(f"Original Shape: {df.shape}")
 
 # 2. Remove Duplicate Records
