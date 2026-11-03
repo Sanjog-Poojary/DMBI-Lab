@@ -1,6 +1,6 @@
 # Experiment 7: K-Means Clustering in RapidMiner (Altair AI Studio) & Python Comparison
 
-Course: Data Mining and Business Intelligence (DMBI Lab) — Roll No. 40.
+Course: Data Mining and Business Intelligence (DMBI Lab) — Roll No. 38.
 
 ## RapidMiner Process (Design View)
 `Retrieve -> Select Attributes -> Replace Missing Values -> Normalize (Z-transformation) -> Clustering (K-Means, k = 4)`

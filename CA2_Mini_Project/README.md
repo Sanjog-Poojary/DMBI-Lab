@@ -18,7 +18,7 @@
 | **Presentation (PPT) Link** | `[PLACEHOLDER: Insert Google Slides / PPT Link here]` |
 | **Project Report Link** | `[PLACEHOLDER: Insert Google Docs / PDF Report Link here]` |
 | **SDG Goal** | **SDG 9: Industry, Innovation and Infrastructure** (Target 9.5: Enhance scientific research, upgrade technological capabilities of industrial sectors) & **SDG 8: Decent Work and Economic Growth** (Target 8.2: Diversify, innovate and upgrade for economic productivity) |
-| **YouTube Video Link** | `[PLACEHOLDER: Roll No. 40 - Sanjog Poojary: https://youtu.be/placeholder]` |
+| **YouTube Video Link** | `[PLACEHOLDER: Roll No. 38 - Sanjog Poojary: https://youtu.be/placeholder]` |
 | **GitHub Code Link** | https://github.com/Sanjog-Poojary/dmbi-lab/tree/main/CA2_Mini_Project |
 | **Academic Term / Batch** | DMBI Lab / AY 2026–27 |
 

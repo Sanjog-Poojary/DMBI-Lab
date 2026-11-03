@@ -3,7 +3,7 @@ title DMBI Video Streaming BI Dashboard
 cd /d "%~dp0\.."
 
 echo ========================================================
-echo   DMBI Video Streaming Platform BI Dashboard (Roll 40)
+echo   DMBI Video Streaming Platform BI Dashboard (Roll 38)
 echo ========================================================
 echo.
 echo Starting Streamlit app from: %CD%
